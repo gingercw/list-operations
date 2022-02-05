@@ -220,7 +220,3 @@ def delete_middle(input_list):
     input_list[2:-2] = []
     print(input_list)
     pass
-
-
-test = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
-delete_middle(test)
