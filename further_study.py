@@ -115,11 +115,12 @@ def custom_remove(input_list, value):
         True
 
     """
-    for i in range(len(input_list)):
-        if input_list[i] == value:
-            del input_list[i]
+    index = -1
+    for n in input_list:
+        index += 1
+        if n == value:
+            del input_list[index]
             break
-
     pass
 
 
@@ -157,11 +158,16 @@ def custom_index(input_list, value):
         1
 
     """
-    for i in range(len(input_list)):
-        if input_list[i] == value:               
-            return i
-            break
+    index = 0
 
+    
+    for n in input_list:
+        if n != value:
+            index += 1
+        elif n == value:
+            break
+    
+    return index
 
 
 def custom_count(input_list, value):
@@ -244,7 +250,9 @@ def custom_equality(some_list, another_list):
         False
 
     """
-    
+    if some_list == another_list:
+        return True
 
 
-    return None
+    return False
+
